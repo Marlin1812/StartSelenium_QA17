@@ -10,14 +10,8 @@ public class StartSelenium {
 
     @BeforeMethod
     public void preCondition(){
-
-<<<<<<< Updated upstream
         wd = new ChromeDriver();
         wd.get("https://telranedu.web.app/");
-=======
-       wd = new ChromeDriver();
-       wd.get("https://telranedu.web.app/");
->>>>>>> Stashed changes
 
     }
 
@@ -35,11 +29,8 @@ public class StartSelenium {
 
     @AfterMethod
     public void postCondition(){
-<<<<<<< Updated upstream
+
         // wd.close();
-=======
-       // wd.close();
->>>>>>> Stashed changes
         wd.quit();
 
     }
