@@ -30,7 +30,8 @@ public class TableTest {
 //        HW4-HW5
 
 //        List<WebElement> row4 = wd.findElements(By.cssSelector("#customers tr:nth-child(4) td"));
-        List<WebElement> row4 = wd.findElements(By.xpath("//*[@id='customers']//tr[4]"));
+//        List<WebElement> row4 = wd.findElements(By.xpath("//*[@id='customers']//tr[4]"));
+        List<WebElement> row4 = wd.findElements(By.xpath("//tr[4]"));
         text = "";
         for(WebElement e : row4) {
             System.out.println(e.getText());
@@ -40,28 +41,38 @@ public class TableTest {
         System.out.println(text.contains("Mexico"));
 
 //        List<WebElement> rows = wd.findElements(By.cssSelector("#customers tr"));
-        List<WebElement> rows = wd.findElements(By.xpath("//*[@id='customers']//tr"));
+//        List<WebElement> rows = wd.findElements(By.xpath("//*[@id='customers']//tr"));
+        List<WebElement> rows = wd.findElements(By.xpath("//table[1]//tr"));
         System.out.println(rows.size());
 
 //        List<WebElement> cols = wd.findElements(By.cssSelector("#customers th"));
-        List<WebElement> cols = wd.findElements(By.xpath("//*[@id='customers']//th"));
+//        List<WebElement> cols = wd.findElements(By.xpath("//*[@id='customers']//th"));
+//        List<WebElement> cols = wd.findElements(By.xpath("//table[1]/tbody[1]/tr/th"));
+        List<WebElement> cols = wd.findElements(By.xpath("//table[1]//th"));
+
         System.out.println(cols.size());
+        for (WebElement e: cols) {
+            System.out.println(e.getText());
+        }
 
 //        List<WebElement> row3 = wd.findElements(By.cssSelector("#customers tr:nth-child(4)"));
-        List<WebElement> row3 = wd.findElements(By.xpath("//*[@id='customers']//tr[4]"));
+//        List<WebElement> row3 = wd.findElements(By.xpath("//*[@id='customers']//tr[4]"));
+        List<WebElement> row3 = wd.findElements(By.xpath("//tr[4]"));
         for (WebElement e: row3) {
             System.out.println(e.getText());
 
         }
 
 //        List<WebElement> lastCol = wd.findElements(By.cssSelector("#customers td:last-child"));
-        List<WebElement> lastCol = wd.findElements(By.xpath("//*[@id='customers']//td[3]"));
+//        List<WebElement> lastCol = wd.findElements(By.xpath("//*[@id='customers']//td[3]"));
+        List<WebElement> lastCol = wd.findElements(By.xpath("//td[3]"));
         for (WebElement e: lastCol) {
             System.out.println(e.getText());
         }
 
 //        List<WebElement> tr = wd.findElements(By.cssSelector("#customers tr"));
-        List<WebElement> tr = wd.findElements(By.xpath("//*[@id='customers']//tr"));
+//        List<WebElement> tr = wd.findElements(By.xpath("//*[@id='customers']//tr"));
+        List<WebElement> tr = wd.findElements(By.xpath("//tr"));
         for (int i = 0; i < tr.size(); i++) {
             if (tr.get(i).getText().contains("Philip Cramer")){
                 System.out.println(i+1);
